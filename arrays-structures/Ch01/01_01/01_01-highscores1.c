@@ -1,21 +1,22 @@
 #include <stdio.h>
 
+typedef unsigned int uint;
+
+// Is using a define preprocessor as a constant the best way to keep and use the length of an array?
+// What if the size is dynamically allocated? 
+#define SIZE 5
+
 int main()
 {
-	float highscore1,highscore2,highscore3,highscore4,highscore5;
-
-	highscore1 = 993.86;
-	highscore2 = 682.01;
-	highscore3 = 639.60;
-	highscore4 = 310.45;
-	highscore5 = 123.25;
+	float highscore[SIZE] = {
+		993.86, 682.01, 639.60, 310.45, 123.25
+	};
 
 	puts("Here are the high scores:");
-	printf("#1 %.2f\n",highscore1);
-	printf("#2 %.2f\n",highscore2);
-	printf("#3 %.2f\n",highscore3);
-	printf("#4 %.2f\n",highscore4);
-	printf("#5 %.2f\n",highscore5);
+	for (uint i = 0; i < SIZE; i++) 
+	{
+		printf("#1 %.2f\n", highscore[i]);
+	}
 
 	return(0);
 }

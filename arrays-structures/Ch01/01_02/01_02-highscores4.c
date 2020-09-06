@@ -7,8 +7,10 @@ int main()
 
 	for(x=0;x<5;x++)
 	{
-		printf("High score #%d: ",x+1);
-		scanf("%f",&highscore[x]);
+		printf("High score #%d: ", x+1);
+
+		// Note the use of the & (Address of) operator, in order to use scanf
+		scanf("%f", &highscore[x]);
 	}
 
 	puts("Here are the high scores:");
