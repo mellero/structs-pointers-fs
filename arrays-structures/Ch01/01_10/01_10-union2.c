@@ -2,6 +2,9 @@
 
 int main()
 {
+	// A union is similar to a struct, but *all* members within the union *share* its storage space
+	// Unions are dangerous/unsafe. The compiler does not check to enure proper data type is used.
+	// Modifying one member, can modify any other members. 
 	union storage {
 		char a;
 		int b;
