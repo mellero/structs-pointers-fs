@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-void show_pixel(struct pixel p);
-
 struct pixel {
 	int horz;
 	int vert;
 	char color;
 };
+
+// Make sure that what is used in a forward declaration (below) is declared before it. pixel must be already declared to use it in the 
+// forward declaration below
+void show_pixel(struct pixel p);
 
 int main()
 {
